@@ -8,12 +8,14 @@ This crate provides **IO-free Rust types** representing the spine of an IATI Act
 ## Overview
 
 IATI publishes open data on development and humanitarian activities in XML. While powerful, the raw XML can be complex to work with:  
+
 - Nested structures  
 - Multiple transaction types  
 - Currency variations  
 - Inconsistent reporting practices  
 
 `iati-types` provides clean, strongly typed Rust models that can be used as a foundation for:  
+
 - Parsing and serializing IATI XML (via downstream crates like `iati-xml`)  
 - Data cleaning and transaction rollups (`iati-transform`)  
 - Currency conversion (`iati-fx`)  
