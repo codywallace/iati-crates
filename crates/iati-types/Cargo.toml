@@ -16,12 +16,7 @@ include = [
     "README.md",
     "src/**",
     "LICENSE*",
-    "COPYING*"
-]
-
-exclude = [
-    "Cargo.lock",
-    "Cargo.toml.orig"
+    "COPYING*" 
 ]
 
 [features]
