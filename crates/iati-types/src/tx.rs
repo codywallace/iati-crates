@@ -2,7 +2,7 @@ use crate::OrgRef;
 use crate::money::{CurrencyCode, Money};
 use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
-use std::str::FromStr;
+use std::str::FromStr;  
 
 /// IATI Transaction Type (from Transaction/@type).
 /// See https://iatistandard.org/en/iati-standard/activities/transaction/#transaction-type
@@ -10,7 +10,7 @@ use std::str::FromStr;
 /// Note that 'Transaction/@type' is distinct from 'Transaction/transaction-type'.
 /// The latter is a child element with its own codelist (see TxType enum).
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)] 
 pub enum TxType {
     IncomingFunds,      // 1
     OutgoingCommitment, // 2
@@ -53,7 +53,7 @@ impl TxType {
 
 impl std::fmt::Display for TxType {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.code())
+        write!(f, "{}", self.code()) 
     }
 }
 
@@ -81,7 +81,7 @@ impl From<u16> for TxType {
 impl FromStr for TxType {
     type Err = std::num::ParseIntError; // parsing from string to u16 may fail
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let n: u16 = s.trim().parse()?;
+        let n: u16 = s.trim().parse()?; 
         Ok(TxType::from(n))
     }
 }
@@ -105,7 +105,7 @@ impl Transaction {
             tx_type,
             date,
             value,
-            provider_org: None,
+            provider_org: None, 
             receiver_org: None,
             currency_hint: None,
         }
@@ -129,3 +129,5 @@ impl Transaction {
         self
     }
 }
+
+

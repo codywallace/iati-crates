@@ -1,4 +1,8 @@
+
 # iati-types
+
+[![Crates.io](https://img.shields.io/crates/v/iati-types.svg)](https://crates.io/crates/iati-types)
+[![Docs.rs](https://docs.rs/iati-types/badge.svg)](https://docs.rs/iati-types)
 
 Core strongly typed data models for the [International Aid Transparency Initiative (IATI)](https://iatistandard.org) Activity Standard v2.03.  
 This crate provides **IO-free Rust types** representing the spine of an IATI Activity, focusing on transactions, currencies, and identifiers.
@@ -59,3 +63,4 @@ fn main() {
 
     println!("{:?}", activity);
 }
+
