@@ -1,0 +1,30 @@
+[package]
+name = "iati-xml"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Streaming XML parser for IATI Activity data (v2.03) that converts into strongly-typed Rust models from iati-types."
+readme = "README.md"
+
+include = [
+    "Cargo.toml",
+    "README.md",
+    "src/**",
+    "examples/**",
+    "LICENSE*",
+    "COPYING*"
+]
+
+[dependencies]
+iati-types = { path = "../iati-types", version = "0.1" }
+quick-xml = "0.38.3"
+rust_decimal = "1.38.0"
+chrono = { version = "0.4.42", features = ["serde"] }
+thiserror = "2.0.17"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145" 
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
