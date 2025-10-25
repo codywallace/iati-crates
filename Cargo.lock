@@ -221,10 +221,10 @@ dependencies = [
 
 [[package]]
 name = "iati-transform"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "chrono",
- "iati-types",
+ "iati-types 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "rust_decimal",
  "serde",
  "serde_json",
@@ -243,11 +243,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "iati-types"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "31f998567f37d6a090d109e889a62416a17cbd0a167536b56c8f2bc527d38bfb"
+dependencies = [
+ "chrono",
+ "rust_decimal",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "iati-xml"
 version = "0.1.0"
 dependencies = [
  "chrono",
- "iati-types",
+ "iati-types 0.1.1",
  "pretty_assertions",
  "quick-xml",
  "rust_decimal",
