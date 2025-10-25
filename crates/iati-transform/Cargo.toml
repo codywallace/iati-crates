@@ -8,7 +8,7 @@ repository = "https://github.com/codywallace/iati-crates"
 homepage = "https://github.com/codywallace/iati-crates"
 readme = "README.md"
 keywords = ["iati", "aid", "data", "transform", "development"]
-categories = ["data-processing"]
+categories = ["data-structures", "algorithems"]
 
 # publish essentials
 include = [
