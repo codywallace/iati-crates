@@ -10,7 +10,7 @@ use std::str::FromStr;
 /// Note that 'Transaction/@type' is distinct from 'Transaction/transaction-type'.
 /// The latter is a child element with its own codelist (see TxType enum).
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)] 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)] 
 pub enum TxType {
     IncomingFunds,      // 1
     OutgoingCommitment, // 2
@@ -129,5 +129,3 @@ impl Transaction {
         self
     }
 }
-
-

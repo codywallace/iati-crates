@@ -18,7 +18,7 @@ include = [
 ]
 
 [dependencies]
-iati-types = { path = "../iati-types", version = "0.1" }
+iati-types = { path = "../iati-types", version = "0.1.1", features = ["serde"] }
 quick-xml = "0.38.3"
 rust_decimal = "1.38.0"
 chrono = { version = "0.4.42", features = ["serde"] }

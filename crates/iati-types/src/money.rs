@@ -4,17 +4,17 @@ use serde::{Deserialize, Serialize};
 
 /// ISO 4217 currency code stored as uppercase string.
 /// Kept as a newtype to allow lightweight validation/normalisation later.
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))] 
+#[derive(Debug, Clone, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub struct CurrencyCode(pub String);
 
-impl From<&str> for CurrencyCode {
+impl From<&str> for CurrencyCode {  
     fn from(s: &str) -> Self {
-        Self(s.to_ascii_uppercase())
+        Self(s.to_ascii_uppercase()) 
     }
 }
 impl From<String> for CurrencyCode {
-    fn from(s: String) -> Self {
+    fn from(s: String) -> Self {  
         Self(s.to_ascii_uppercase())
     }
 }
@@ -29,10 +29,10 @@ pub struct Money {
     pub currency: Option<CurrencyCode>,
     /// Preferred date to use for FX. If 'None', callers may fall back to
     /// 'Transaction.transaction_date' or 'Activity.activity_start'.
-    pub value_date: Option<NaiveDate>,
+    pub value_date: Option<NaiveDate>, 
 }
 
-impl Money {
+impl Money { 
     pub fn new(amount: Decimal) -> Self {
         Self {
             amount,
