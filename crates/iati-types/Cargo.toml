@@ -1,16 +1,14 @@
 [package]
 name = "iati-types"
-version = "0.1.0"
+version = "0.1.1"
 description = "Core data types for IATI Activity v2.03: Activity, Transaction, Money, TxType, etc."
 readme = "README.md"
 
-# Inherit workspace values
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
 homepage.workspace = true
 
-# Only include the essentials in the published crate
 include = [
     "Cargo.toml",
     "README.md",
