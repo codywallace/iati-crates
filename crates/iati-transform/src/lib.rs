@@ -4,7 +4,7 @@ use iati_types::{money::CurrencyCode, tx::TxType, Activity};
 use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
-use thiserror::Error;
+use thiserror::Error; 
 
 #[derive(Debug, Error)]
 pub enum TransformError {
