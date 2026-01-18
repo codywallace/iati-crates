@@ -1,0 +1,20 @@
+[package]
+name = "iati-fx"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description =  "Foreign-exchange provider for IATI data (monthly IMF tables, currency conversion)."
+readme = "README.md"
+
+[features]
+default = []
+
+[dependencies]
+chrono = { version = "0.4.42", default-features = false, features = ["clock"] }
+rust_decimal = { version = "1.38.0" }
+iati-types = { version = "0.1.1" }
+thiserror = "2.0.17"
+serde = { version = "1.0.228", features = ["derive"], optional = true }
+serde_json = { version = "1.0.145", optional = true }

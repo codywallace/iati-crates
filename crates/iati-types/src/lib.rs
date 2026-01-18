@@ -13,7 +13,7 @@ use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 
 /// Lightweight organisation reference used here through the Activity tree.
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))] 
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
 pub struct OrgRef {
     /// This is the IATI identifier of the organisation or registry-specific id.
@@ -71,7 +71,7 @@ mod tests {
     fn money_uppercases_currency() {
         use crate::money::{CurrencyCode, Money};
         let m = Money {
-            amount: Decimal::new(1000, 2),
+            amount: Decimal::new(1000, 2), 
             currency: Some(CurrencyCode::from("usd")),
             value_date: None,
         };

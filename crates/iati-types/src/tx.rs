@@ -30,7 +30,7 @@ pub enum TxType {
 
 impl TxType {
     /// Return the IATI code for this TxType.
-    pub fn code(self) -> u16 {
+    pub fn code(self) -> u16 { 
         use TxType::*;
         match self {
             IncomingFunds => 1,
@@ -51,13 +51,13 @@ impl TxType {
     }
 }
 
-impl std::fmt::Display for TxType {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+impl std::fmt::Display for TxType { 
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result { 
         write!(f, "{}", self.code()) 
     }
 }
 
-impl From<u16> for TxType {
+impl From<u16> for TxType { 
     fn from(code: u16) -> Self {
         match code {
             1 => TxType::IncomingFunds,
