@@ -220,6 +220,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "iati-fx"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "iati-types 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rust_decimal",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "iati-transform"
 version = "0.1.1"
 dependencies = [
